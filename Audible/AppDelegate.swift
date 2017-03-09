@@ -20,10 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         window?.rootViewController = ViewController()
-        
-        
-        
-        
+
         return true
     }
 

@@ -63,21 +63,12 @@ class PageCell: UICollectionViewCell {
         view.backgroundColor = UIColor(white: 0.9, alpha: 1)
         return view
     }()
-    
-    let skipButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Skip", for: .normal)
-        button.setTitleColor(UIColor(colorLiteralRed: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
-        return button
-    }()
-    
+
     func setupViews() {
         addSubview(imageView)
         addSubview(textView)
         addSubview(lineSeparatorView)
-        addSubview(skipButton)
         
-        _ = skipButton.anchor(topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50)
         
         imageView.anchorToTop(topAnchor, left: leftAnchor, bottom: textView.topAnchor, right: rightAnchor)
         
@@ -86,6 +77,7 @@ class PageCell: UICollectionViewCell {
         
         lineSeparatorView.anchorToTop(nil, left: leftAnchor, bottom: textView.topAnchor, right: rightAnchor)
         lineSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+
     }
     
     required init?(coder aDecoder: NSCoder) {
