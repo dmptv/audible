@@ -15,6 +15,7 @@
 		0F05A33F1E70257700774051 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A33E1E70257700774051 /* PageCell.swift */; };
 		0F05A3411E70317000774051 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3401E70317000774051 /* Page.swift */; };
 		0F05A3611E7120C600774051 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F05A3601E7120C500774051 /* Extentions.swift */; };
+		0F1348F71E728C9800750D1B /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1348F61E728C9800750D1B /* LoginCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0F05A33E1E70257700774051 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		0F05A3401E70317000774051 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		0F05A3601E7120C500774051 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		0F1348F61E728C9800750D1B /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				0F05A32C1E6FEF3900774051 /* AppDelegate.swift */,
 				0F05A32E1E6FEF3900774051 /* ViewController.swift */,
 				0F05A33E1E70257700774051 /* PageCell.swift */,
+				0F1348F61E728C9800750D1B /* LoginCell.swift */,
 				0F05A3401E70317000774051 /* Page.swift */,
 				0F05A3601E7120C500774051 /* Extentions.swift */,
 				0F05A3301E6FEF3900774051 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 				0F05A3611E7120C600774051 /* Extentions.swift in Sources */,
 				0F05A3411E70317000774051 /* Page.swift in Sources */,
 				0F05A33F1E70257700774051 /* PageCell.swift in Sources */,
+				0F1348F71E728C9800750D1B /* LoginCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
