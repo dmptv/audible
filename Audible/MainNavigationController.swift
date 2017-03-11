@@ -23,13 +23,13 @@ class MainNavigationController: UINavigationController {
      }
     
     fileprivate func isLoggedIn() -> Bool {
-        return true
+        return false
     }
 
     func showLoginController() {
         let loginController  = LoginController()
         
-        // whithout nav bar as modal
+        // without nav bar as modal
         present(loginController, animated: true, completion: {
             //
         })

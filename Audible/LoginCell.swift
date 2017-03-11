@@ -34,13 +34,20 @@ class LoginCell: UICollectionViewCell {
         return textField
     }()
     
-    let logoButton: UIButton = {
+    lazy var  loginButton: UIButton = {
         let lb = UIButton()
         lb.backgroundColor = .orange
         lb.setTitle("Log in", for: .normal)
         lb.setTitleColor(.white, for: .normal)
+        lb.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return lb
     }()
+
+    weak var delegate: LoginControllerDelegate?
+    
+    func handleLogin() {
+        delegate?.finishLoggingIn()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,7 +55,7 @@ class LoginCell: UICollectionViewCell {
         addSubview(logoImageView)
         addSubview(emailTextField)
         addSubview(passwordTextField)
-        addSubview(logoButton)
+        addSubview(loginButton)
         
         _ = logoImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -230, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 160, heightConstant: 160)
         logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -57,7 +64,7 @@ class LoginCell: UICollectionViewCell {
         
         _ = passwordTextField.anchor(emailTextField.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
         
-        _ = logoButton.anchor(passwordTextField.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
+        _ = loginButton.anchor(passwordTextField.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -72,7 +79,7 @@ class LeftPaddingTextField: UITextField {
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-         return CGRect(x: bounds.origin.x + 10, y: bounds.origin.y, width: bounds.size.width - 20, height: bounds.size.height)
+        return CGRect(x: bounds.origin.x + 10, y: bounds.origin.y, width: bounds.size.width - 10, height: bounds.size.height)
     }
 }
 
