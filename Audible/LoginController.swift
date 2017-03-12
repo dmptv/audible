@@ -74,7 +74,8 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         
         //second last page
         if pageControl.currentPage == pages.count - 1 {
-            moveControlConstrintsOffScreen()
+            // remove elements from screen
+            moveControlConstraintsOffScreen()
             animateLayout()
         }
         
@@ -113,7 +114,6 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     
     fileprivate func  observeKeyBoardNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardShow), name: .UIKeyboardWillShow, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyBoardHide), name: .UIKeyboardWillHide, object: nil)
     }
     
@@ -159,18 +159,17 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         
         // we are on the last page
         if pageNUmber == pages.count {
-            moveControlConstrintsOffScreen()
+            moveControlConstraintsOffScreen()
         } else {
             // back on regular pages
             pageControlBottomAnchor?.constant = 0
             skipButtonTopAnchor?.constant = 16
             nextButtonTopAnchor?.constant = 16
         }
-        
         animateLayout()
     }
     
-    fileprivate func moveControlConstrintsOffScreen() {
+    fileprivate func moveControlConstraintsOffScreen() {
         pageControlBottomAnchor?.constant = 40
         skipButtonTopAnchor?.constant = -40
         nextButtonTopAnchor?.constant = -40
