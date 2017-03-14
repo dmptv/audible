@@ -26,10 +26,12 @@ class PageCell: UICollectionViewCell {
             if UIDevice.current.orientation.isLandscape {
                 imageName += ("_landscape")
             }
+            
             imageView.image = UIImage(named: imageName)
             
             let color = UIColor(white: 0.2, alpha: 1)
             
+            // Составной текст для textView
             let attributedText = NSMutableAttributedString(string: page.title, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium), NSForegroundColorAttributeName: color])
             
             attributedText.append(NSMutableAttributedString(string: "\n\n\(page.message)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: color]))

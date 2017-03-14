@@ -28,6 +28,7 @@ class MainNavigationController: UINavigationController {
     }
 
     func showLoginController() {
+        // as modal controller
         let loginController  = LoginController()
         present(loginController, animated: true, completion: {
             //
